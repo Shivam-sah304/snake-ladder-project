@@ -119,7 +119,7 @@ x:
 void scoreboard(int p[4], int n)
 {
     int i, j, pos, a, k;
-    int l;
+    int l=1;
     // defing the value of pos from 1-100
 
     for (i = 10; i >= 1; i--)
@@ -142,14 +142,13 @@ void scoreboard(int p[4], int n)
                 a++;
             }
             // printing scoreboard from 1-100
-            for (l = 0; l < n; l++)
-            {
-                if (pos == p[l])
-                {
-                    pos = 1111;
-                }
+            if(pos==45||pos==67){
+                printf("L1\t");
             }
-            printf("\033[1;32m||%d||\033[0m\t", pos);
+        
+
+            
+            
         }
 
         printf("\n\n");
