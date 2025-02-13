@@ -24,7 +24,8 @@ int main(){
     printf("\033[1;32mNow GOing to enter to the new game\033[0m\n",i+1); 
     srand(time(NULL));
     while(a[0]!=100&&a[1]!=100&&a[2]!=100&&a[3]!=100){
-        
+
+           
             printf("player1 your turns\n");
 
 
@@ -33,22 +34,14 @@ int main(){
         scanf("%d",&q);
         t=disc();
 
-        //calling the disc for first player
-        
-
-
-        
-           
+        //calling the disc for first player  
         a[0]=a[0]+t;
         printf("you rolled %d\n",t);
         if(a[0]>100){
             a[0]=a[0]-t;
         }
         printf("your current score is %d\n",a[0]);
-        
-        
         printf("player2 your turns\n");
-
         printf("enter any key to roll\n");
         scanf("%d",&q);
         t1=disc();//calling the disc for second player
@@ -72,9 +65,6 @@ int main(){
         }
         printf("your current score is %d\n",a[2]);
         printf("player4 your turns\n");
-
-
-
         printf("enter any key to roll\n");
         scanf("%d",&q);
         t4=disc();//calling the disc for forth player
@@ -135,7 +125,7 @@ int main(){
                 return 0;
         
             }
-getch();
+        
         }   
         scoreboard(a);     
     }
@@ -182,6 +172,43 @@ void scoreboard(int p[4]){
         else if(p[3]==pos ){
             printf("\033[1;33m|#p4#|\033[0m\t"); 
         }
+        else if(pos==45||pos==67){
+            printf("\033[1;36m|L1|\033[0m\t"); 
+            
+        
+            
+        }
+        else if(pos==76||pos==87){
+            printf("\033[1;37m|L2|\033[0m\t"); 
+            
+        
+            
+        }
+        else if(pos==12||pos==34){
+            printf("\033[1;37m|L3|\033[0m\t"); 
+            
+        
+            
+        }
+        else if(pos==56||pos==67){
+            printf("\033[1;37m|L4|\033[0m\t"); 
+            
+        
+            
+        }
+        else if(pos==85||pos==97){
+            printf("\033[1;36m|L5|\033[0m\t"); 
+            
+        
+            
+        }
+        else if(pos==24||pos==46){
+            printf("\033[1;36m|L6|\033[0m\t"); 
+            
+        
+            
+        }
+
 
         else{
             
